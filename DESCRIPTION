@@ -1,0 +1,13 @@
+Package: HWadmix
+Version: 0.1
+Date: 2019-02-02
+Title: Hardy-Weinberg tests with sex-biased admixture
+Description: Likelihood ratio and chi-squared tests of Hardy-Weinberg
+    equilibrium for loci on the X chromosome potentially affected by sex-biased
+    admixture.
+Authors@R: c(person("Shai", "Carmi", role = c("aut")),
+             person("Daniel", "Backenroth", role = c("aut", "cre"), 
+               email = "daniel.backenroth@gmail.com"))
+Maintainer: Daniel Backenroth <daniel.backenroth@gmail.com>
+License: GPL-3
+RoxygenNote: 5.0.1
