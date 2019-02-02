@@ -1,4 +1,4 @@
-# HWadmix
+# HWadmiX
 
 Tests of Hardy-Weinberg equilibrium for X-linked markers in the presence of sex-biased admixture
 
@@ -6,4 +6,4 @@ Citation: Daniel Backenroth and Shai Carmi, A test for Hardy-Weinberg equilibriu
 
 ## Installation
 
-Requires R and the devtools library. Use the commands `library(devtools)` and `install_github("dbackenroth/HWadmix")`.
+Requires R and the devtools library. Use the commands `library(devtools)` and `install_github("dbackenroth/HWadmiX")`.

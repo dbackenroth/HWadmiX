@@ -1,24 +1,35 @@
-#' Carries out likelihood ratio test and chi-squared testfor Hardy Weinberg equilibrium for 
+#' Carries out likelihood ratio test and chi-squared test for Hardy-Weinberg equilibrium for 
 #' X chromosomal markers, accounting for the possibility of sex-biased admixture
 #'
 #' @param X a named vector containing the genotype counts (names should be AA, AB, BB, A, B)
 #'
-#' @return list with elements
+#' @return list with the following elements:
+#' 
 #'   lrt_pval: the p-value of the LRT test
+#'   
 #'   prev_p_f, prev_p_m: the ML estimates of the previous generation allele frequencies in females and males
+#'   
 #'   F_ic: the ML estimate of the inbreeding coefficient
-#'   current_p_f, current_p_m: the ML estimates of the current generation allele frequencies in females and males
-#'   current_p_AA, current_p_AB, current_p_BB: the ML estimates of the current generation genotype frequencies in females
+#'   
+#'   current_p_f, current_p_m: estimates of the current generation allele frequencies in females and males, 
+#'   based on the ML estimates of the previous generation allele frequencies and of the inbreeding coefficient
+#'   
+#'   current_p_AA, current_p_AB, current_p_BB: estimates of the current generation genotype frequencies in females, 
+#'   based on the ML estimates of the previous generation allele frequencies and of the inbreeding coefficient
+#'   
 #'   cs_ml_pval: the p-value of the chi-squared (maximum likelihood) test
-#'   you_lrt0_unconstrained_pval: the p-value of the You et al. LRT0 test
+#'   
+#'   you_lrt0_unconstrained_pval: the p-value of the LRT0 test from 
+#'        X.-P. You, Q.-L. Zou, J.-L. Li and J.-Y. Zhou, Likelihood ratio test for 
+#'        excess homozygosity at marker loci on X chromosome. LRT0 test, PLoS One 2015; 10(12): e0145032,
 #'        where the inbreeding coefficient is not constrained to be in [0,1]
 #'
 #' @examples
 #' snp <- c(A = 122, B = 278, AA = 88, AB = 242, BB = 70)
-#' HWadmix(snp)
+#' HWadmiX(snp)
 #'
 #' @export
-HWadmix <- 
+HWadmiX <- 
 function(X) {
   
   if (!any(c("integer", "numeric") %in% class(X))) {
