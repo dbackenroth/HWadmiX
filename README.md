@@ -1,10 +1,9 @@
+# HWadmix
+
 Tests of Hardy-Weinberg equilibrium for X-linked markers in the presence of sex-biased admixture
 
-Described in paper to be submitted:
+Citation: Daniel Backenroth and Shai Carmi, A test for Hardy-Weinberg equilibrium on the X chromosome for sex-biased admixed populations
 
-Daniel Backenroth and Shai Carmi, A test for Hardy-Weinberg equilibrium on the X chromosome for sex-biased admixed populations
+## Installation
 
-Install in R with the following commands:
-
-library(devtools)
-install_github("dbackenroth/HWadmix")
+Requires R and the devtools library. Use the commands `library(devtools)` and `install_github("dbackenroth/HWadmix")`.
